@@ -1,6 +1,3 @@
-# macrohapcaller2
-Macrohaplotype caller for STR, SNP and InDel from NGS long read sequencing data
-
 # MacroHapCaller
 
 * __phased multiple alleles calling for Next Generation sequencing generated long sequencing reads, e.g. PacBio HiFi__
