@@ -25,7 +25,7 @@ Step 1. Go to the Orcale website, download and unzip the file https://download.o
 Step 2. add the path to your unzipped Java bin directory before running the command. e.g.
 the Java is unzipped into c/java21, then the path will be c/java21/jdk-21/bin, the running command will be :
 
-`path=c/java21/bin`
+`path=c/java21/jdk-21/bin`
 
 `$path/java -jar MacroHapCaller##.jar`
 
