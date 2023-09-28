@@ -17,6 +17,16 @@ MacroHapCaller runs fast. It takes ~ 2 mins for merged data from four full runs 
 ## Latest version
 V0.4
 
+## Environment
+the Java enviroment is needed. Latest LTS Java 21 or higher is recommended. Go to Orcale website, download and unzip the file https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz ; then adding the path into to enviroment. or add the path to your unzipped Java bin directory before running the command. e.g.
+the Java is unzipped into c/java21, then the path will be c/java21/bin, the running command will be :
+
+`path=c/java21/bin`
+`$path/java -jar MacroHapCaller##.jar`
+
+Or you can install the Java  JDK 21 in your computer, then you can run without $path/ before java , just like instructed below.
+
+
 ## Usage
 For help: 
 
