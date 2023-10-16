@@ -93,7 +93,9 @@ usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
 ### install dependencies
 
 
-#### fastq-filter
+#### fastq-filter 
+
+details on https://github.com/LUMC/fastq-filter
 
 `pip install fastq-filter`
 
