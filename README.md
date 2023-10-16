@@ -90,6 +90,14 @@ usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
 
 ## Build a pipeline from fastq reads or PacBio bam to macrohaplotypes
 
+### install dependencies
+
+
+#### fastq-filter
+
+`pip install fastq-filter`
+
+
 ### Step 1: Preprocess pipeline for MacroHapCaller
  This pipeline will preprocess the originall PacBio HiFi reads in BAM to fastq, read quality control, umi-analysis (optional), statistical summary, read-reference alignment, sort, and index. The major results are a read-reference alignment in the BAM format and BAM index, as well as statistical report files. Edit the path and files name to your specified names.
  
