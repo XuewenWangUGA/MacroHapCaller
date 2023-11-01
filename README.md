@@ -86,7 +86,7 @@ usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
  ## Example : 
  parameters and configure files used in MacrohapCaller paper:
  
-    java -jar -Xmx120G MacroHapCaller0.4.jar -i /mnt/data0/xuewen/macrohaplotype/hg002/Q40hifi/hg002.8kampl.Q40.fastq.gz_GRCh38.bam -o hg002.8kampl.Q40_GRCh38.tsv -a /mnt/data0/xuewen/macrohaplotype/scripts/MHvar_v0.3/CODISSTR_anchor.XW.config_v0.2.txt -d /mnt/data0/xuewen/macrohaplotype/scripts/MHvar_v0.3/MHindels_v0.2.bed -n /mnt/data0/xuewen/macrohaplotype/scripts/MHvar_v0.3/MHsnps.pos_v0.2.txt -r /mnt/data0/xuewen/hg38giab/GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta -l 2 -m 1 -q 15 -c 100 -p 0.01 -t 12
+    java -jar -Xmx120G MacroHapCaller0.4.jar -i demo_data/hg002.8kampl.Q30.4kreads.fastq.gz_GRCh38.bam -o hg002.8kampl.Q30.fastq.gz_GRCh38.HapVar.tsv -a config_v0.3/CODISSTR_anchor.XW.config_v0.3.txt -d config_v0.3/MHindels_v0.3.bed -n config_v0.3/MHsnps.pos_v0.3.txt -r GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta -l 2 -m 1 -q 15 -c 100 -p 0.01 -t 12
 
 ## Build a pipeline from fastq reads or PacBio bam to macrohaplotypes
 
