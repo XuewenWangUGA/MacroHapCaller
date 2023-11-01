@@ -94,7 +94,7 @@ usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
 ## Build a pipeline from fastq reads or PacBio bam to macrohaplotypes
 
 ### installation:
-Install from the github. 
+#### Install  MacroHapCaller from the github. 
 `git clone https://github.com/XuewenWangUGA/MacroHapCaller`
 
 `cd MacroHapCaller`
@@ -105,9 +105,9 @@ Or just download all folders from Github and uncompress the zip file. then go to
 
 
 
-#### fastq-filter 
+#### install fastq-filter 
 
-details on https://github.com/LUMC/fastq-filter
+ fastq-filter is the only needed dependency if want to filter the reads. Details on https://github.com/LUMC/fastq-filter. To install
 
 `pip install fastq-filter`
 
