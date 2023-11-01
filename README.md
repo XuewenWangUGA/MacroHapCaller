@@ -121,8 +121,9 @@ E.g., human genome hg38:
 Download the genome sequence of human from the 1000 Genome Project to the folder "VarSeqStitcher" ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa
 `wget ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa`
 
-rename the genome sequence file as a short name:
-mv GRCh38_full_analysis_set_plus_decoy_hla.fa genome.fasta
+rename the genome sequence file as a short name:  
+
+`mv GRCh38_full_analysis_set_plus_decoy_hla.fa genome.fasta`
 
    Then index the genome sequence with samtools (tool link: https://www.htslib.org/)
    samtools faidx genome.fasta
