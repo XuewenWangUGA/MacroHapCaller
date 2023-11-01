@@ -14,8 +14,11 @@ The MacroHapCaller is also integrated into a pipeline with a shell script or Pyt
 
 MacroHapCaller runs fast. It takes ~ 2 mins for merged data from four full runs of PacBio SMRTcell HiFi reads on a Linux machine with 12 threads, and a maximum allowed 120G RAM. 
 
-## Latest version
+## The Latest version
 V0.4
+
+## Historical versions
+V0.3
 
 ## Environment
 the Java run enviroment is needed, which is installed in most computer. You may just need to update it to the lastest version. The Latest LTS Java 21 or higher is recommended. 
@@ -84,7 +87,7 @@ usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
 
  
  ## Example : 
- parameters and configure files used in MacrohapCaller paper:
+ parameters and configure files used in the demo:
  
     java -jar -Xmx120G MacroHapCaller0.4.jar -i demo_data/hg002.8kampl.Q30.4kreads.fastq.gz_GRCh38.bam -o hg002.8kampl.Q30.fastq.gz_GRCh38.HapVar.tsv -a config_v0.3/CODISSTR_anchor.XW.config_v0.3.txt -d config_v0.3/MHindels_v0.3.bed -n config_v0.3/MHsnps.pos_v0.3.txt -r GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta -l 2 -m 1 -q 15 -c 100 -p 0.01 -t 12
 
@@ -100,16 +103,36 @@ details on https://github.com/LUMC/fastq-filter
 `pip install fastq-filter`
 
 
+
+
+### Step 0: prepare a genome reference file which should be the one used for alignment
+E.g., human genome hg38: 
+Download the genome sequence of human from the 1000 Genome Project to the folder "VarSeqStitcher" ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa
+`wget ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa`
+
+rename the genome sequence file as a short name:
+mv GRCh38_full_analysis_set_plus_decoy_hla.fa genome.fasta
+
+   Then index the genome sequence with samtools (tool link: https://www.htslib.org/)
+   samtools faidx genome.fasta
+   
 ### Step 1: Preprocess pipeline for MacroHapCaller
  This pipeline will preprocess the originall PacBio HiFi reads in BAM to fastq, read quality control, umi-analysis (optional), statistical summary, read-reference alignment, sort, and index. The major results are a read-reference alignment in the BAM format and BAM index, as well as statistical report files. Edit the path and files name to your specified names.
  
  `MH_umi_dedup_map_pipe.sh`
 
+ Assume the alignment output will be named as "alignment.bam"
+ 
+
  ### Step 2: call macrohaplotypes
 
- `java -jar -Xmx100G MacroHapCaller0.4.jar -i alignment.bam -o out.tsv -a config_STR.txt -d config_indel.bed -n config_snp.txt -r genome.fasta -l 2 -m 1 -q 15 -c 100 -p 0.01 -t 12`
+ `java -jar -Xmx100G MacroHapCaller0.4.jar -i alignment.bam -o out.tsv -a config_v0.3/CODISSTR_anchor.XW.config_v0.3.txt -d config_v0.3/MHindels_v0.3.bed -n config_v0.3/MHsnps.pos_v0.3.txt -r genome.fasta -l 2 -m 1 -q 15 -c 100 -p 0.01 -t 12`
  
- output will be in file: out.tsv
+ Replace the real file name with your file name, and add file location path before the file if necessary. The above command uses the configure files coming with the software for human CODIS STR based HG38.
+ 
+ The output will be in file: out.tsv, which can be viewed in spreadsheet, Mircosfot Excel or any text file editor.
+ 
+ 
  
 
 ## Input of MacroHapCaller
