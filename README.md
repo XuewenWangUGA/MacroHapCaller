@@ -109,7 +109,7 @@ Or just download all folders from Github and uncomppress the zip file. then go t
 
 
 
-#### install fastq-filter 
+#### Install fastq-filter 
 
  fastq-filter is the only needed dependency if want to filter the reads. Details on https://github.com/LUMC/fastq-filter. To install
 
@@ -118,7 +118,7 @@ Or just download all folders from Github and uncomppress the zip file. then go t
 
 
 
-### Step 0: prepare a genome reference file which should be the one used for alignment
+### Step 0: Prepare a genome reference file which should be the one used for alignment
 E.g., human genome hg38: 
 Download the genome sequence of human from the 1000 Genome Project to the folder "VarSeqStitcher" ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa
 `wget ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa`
@@ -138,7 +138,7 @@ rename the genome sequence file as a short name:
  Assume the alignment output will be named as "alignment.bam"
  
 
- ### Step 2: call macrohaplotypes
+ ### Step 2: Call macrohaplotypes
 
  `java -jar -Xmx100G MacroHapCaller0.4.jar -i alignment.bam -o out.tsv -a config_v0.3/CODISSTR_anchor.XW.config_v0.3.txt -d config_v0.3/MHindels_v0.3.bed -n config_v0.3/MHsnps.pos_v0.3.txt -r genome.fasta -l 2 -m 1 -q 15 -c 100 -p 0.01 -t 12`
  
@@ -154,7 +154,7 @@ rename the genome sequence file as a short name:
 
  2. Configure files of targeted variant positional information for each of STRs, SNPs, and InDels
 
-## Configure file format for STR
+## Configure format for STR
 The configure file listed the STR loci information in a tabular separated text file. An example file for forensic CODIS STR of human genome is given in "CODISSTR_anchor.XW.config_v0.2.txt"
 Each line for one STR locus. There is one fixed headline before starting the detailed STR locus. Every line has 11 columns. The integer value for the last column is the estimated maximum length of TR, where 500 is enough for most cases. The coordinate starts from 1.
 
@@ -165,7 +165,7 @@ Each line for one STR locus. There is one fixed headline before starting the det
 
     
 
-## Configure file format for InDel
+## Configure format for InDel
 The config file for InDel is in a BED format tabular separated plain text file, with coordinates started from 0. The REF and ALT are the bases for InDel in the reference genome and variant. An example file is given for 8-kb fragments containing human CODIS STR. For Details, please read our paper. There is one fixed headline and 5 columns in each line. Then each subsequent line is for one InDel site. If multiple InDel for the same coordinate, list one of them is enough. 
 
     Chrom	ChromStart	ChromEnd	REF	ALT
@@ -176,7 +176,7 @@ The config file for InDel is in a BED format tabular separated plain text file, 
     chr2	1487522	1487526	CAGG	C
     chr2	1489924	1489975	GCACACAGGAGGAGTCACGACAGAGCAGTGTAAGAGCCGCCACGTGGGTCC	G
 
-## Configure file format for SNP
+## Configure format for SNP
 The config file for SNP is in a tabular separated plain text file, with coordinates started from 1.  There is one fixed headline and 5 columns in each line. Then each subsequent line is for one SNP site. An example file is given for 8-kb fragments containing 20 human CODIS STRs. the "ID" column is the name of a DNA fragment, which uses the same name as one of the STR in this 8-kb fragment as STR configure. All SNPs with the same "ID" will be put together with STR alleles in the same fragment once the ID of STR is shared between SNP and STR configure file. 
 
     #CHROM	 POS 	ID	REF	ALT
@@ -217,7 +217,7 @@ Usage:
 `java -jar BamSubset.jar    Bed_file     Input.bam     reduced_input.bam`
   
  
-  #### index and sort a bam file:
+  #### Index and sort a bam file:
 
 for help:
 
