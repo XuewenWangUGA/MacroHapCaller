@@ -7,7 +7,7 @@
 * __run faster with parallel computing__
 
 Macrohaplotype caller for STR, SNP, and InDel from NGS long-read sequencing data, especially for PacBio HiFi reads
-The MacroHapCaller calls targeted STRs/SSRs, SNPs, and InDels sites simultaneously in a row from each single NGS read and clusters the variants into phased haplotype strings. MacroHapCaller is the best tool to analyze all haplotypic variants from genetically inherited DNA. It suits diploid, polyploid, and complex DNA mixtures from many individuals, e.g. DNA forensics. MacroHapCaller is programmed in Java with parallel computing enabled so it can run on any computing platform. 
+The MacroHapCaller calls targeted STRs/SSRs, SNPs, and InDels sites simultaneously in a row from each NGS read and clusters the variants into phased haplotype strings. MacroHapCaller is the best tool to analyze all haplotypic variants from genetically inherited DNA. It suits diploid, polyploid, and complex DNA mixtures from many individuals, e.g. DNA forensics. MacroHapCaller is programmed in Java with parallel computing enabled so it can run on any computing platform. 
 
 The MacroHapCaller is also integrated into a pipeline with a shell script or Python3. The pipeline takes the BAM or fastq reads as input, align reads to the genome, sort, and index alignment, and then user can use the output to run MacroHapCaller. Additional tools are also available as util tools. For util usage : `java -jar appName.jar` where appName should be replaced with a detailed tool name. 
 
@@ -21,11 +21,11 @@ V0.4
 V0.3
 
 ## Environment
-the Java run enviroment is needed, which is installed in most computer. You may just need to update it to the lastest version. The Latest LTS Java 21 or higher is recommended. 
+The Java run environment is needed, which is installed in most computer. You may just need to update it to the latest version. The Latest LTS Java 21 or higher is recommended. 
 
 Step 1. Go to the Orcale website, download and unzip the file https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz ; 
 
-Step 2. add the path to your unzipped Java bin directory before running the command. e.g.
+Step 2. Add the path to your unzipped Java bin directory before running the command. e.g.
 the Java is unzipped into c/java21, then the path will be c/java21/jdk-21/bin, the running command will be :
 
 `path=c/java21/jdk-21/bin`
@@ -34,7 +34,7 @@ the Java is unzipped into c/java21, then the path will be c/java21/jdk-21/bin, t
 
 Or you can install the Java  JDK 21 in your computer, then you can run without $path/ before java , just like instructed below.
 
-Or add the path into to enviroment.
+Or add the path into to environment.
 
 
 ## Help
@@ -45,7 +45,7 @@ Open a terminal window. Type the following command for help:
 where ## is the version number, e.g. :   0.4.
 
 ##  Command and options: 
-to change the the version number as needed.
+to change the version number as needed.
 
 usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
 
@@ -87,23 +87,23 @@ usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
 
  
  ## Example : 
- download the subfolders and put inside the folder of "MacroHapCaller". Then users can use parameters and configure files as used in the demo as below.
+ Download the subfolders and put them inside the folder of "MacroHapCaller". Then users can use parameters and configure files as used in the demo listed below.
  
     java -jar -Xmx120G MacroHapCaller0.4.jar -i demo_data/hg002.8kampl.Q30.4kreads.fastq.gz_GRCh38.bam -o hg002.8kampl.Q30.fastq.gz_GRCh38.HapVar.tsv -a config_v0.3/CODISSTR_anchor.XW.config_v0.3.txt -d config_v0.3/MHindels_v0.3.bed -n config_v0.3/MHsnps.pos_v0.3.txt -r GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta -l 2 -m 1 -q 15 -c 100 -p 0.01 -t 12
 
-    the option -Xmx120G is to set allowed maximum memory allowed for this app. it can be ignored or changed to a smalll memory , e.g., -Xmx4G
+    the option -Xmx120G is to set allowed maximum memory allowed for this app. it can be ignored or changed to a small memory , e.g., -Xmx4G
 
 ## Build a pipeline from fastq reads or PacBio bam to macrohaplotypes
 
 ### Installation:
 The MacroHapCaller is programmed in Java and compiled. So just download the APP and run it.
 
-#### Install  MacroHapCaller from the github. 
+#### Install  MacroHapCaller from the Github. 
 `git clone https://github.com/XuewenWangUGA/MacroHapCaller`
 
 `cd MacroHapCaller`
 
-Or just download all folders from Github and uncompress the zip file. then go to the unzipped folder.
+Or just download all folders from Github and uncomppress the zip file. then go to the unzipped folder.
 
 `cd MacroHapCaller`
 
@@ -131,7 +131,7 @@ rename the genome sequence file as a short name:
    samtools faidx genome.fasta
    
 ### Step 1: Preprocess pipeline for MacroHapCaller
- This pipeline will preprocess the originall PacBio HiFi reads in BAM to fastq, read quality control, umi-analysis (optional), statistical summary, read-reference alignment, sort, and index. The major results are a read-reference alignment in the BAM format and BAM index, as well as statistical report files. Edit the path and files name to your specified names.
+ This pipeline will preprocess the original PacBio HiFi reads in BAM to fastq, read quality control, umi-analysis (optional), statistical summary, read-reference alignment, sort, and index. The major results are a read-reference alignment in the BAM format and BAM index, as well as statistical report files. Edit the path and files name to your specified names.
  
  `MH_umi_dedup_map_pipe.sh`
 
@@ -144,7 +144,7 @@ rename the genome sequence file as a short name:
  
  Replace the real file name with your file name, and add file location path before the file if necessary. The above command uses the configure files coming with the software for human CODIS STR based HG38.
  
- The output will be in file: out.tsv, which can be viewed in spreadsheet, Mircosfot Excel or any text file editor.
+ The output will be in file: out.tsv, which can be viewed in spreadsheet, Mircosoft Excel or any other text file editor.
  
  
  
@@ -166,7 +166,7 @@ Each line for one STR locus. There is one fixed headline before starting the det
     
 
 ## Configure file format for InDel
-The config file for InDel is in a BED format tabular separated plain text file, which coordinates start from 0. The REF and ALT are the bases for InDel in the reference genome and variant. An example file is given for 8-kb fragments containing human CODIS STR. For Details, please read our paper. There is one fixed headline and 5 columns in each line. Then each subsequent line is for one InDel site. If multiple InDel for the same coordinate, list one of them is enough. 
+The config file for InDel is in a BED format tabular separated plain text file, with coordinates started from 0. The REF and ALT are the bases for InDel in the reference genome and variant. An example file is given for 8-kb fragments containing human CODIS STR. For Details, please read our paper. There is one fixed headline and 5 columns in each line. Then each subsequent line is for one InDel site. If multiple InDel for the same coordinate, list one of them is enough. 
 
     Chrom	ChromStart	ChromEnd	REF	ALT
     chr1	230764747	230764748	GA	G
@@ -177,7 +177,7 @@ The config file for InDel is in a BED format tabular separated plain text file, 
     chr2	1489924	1489975	GCACACAGGAGGAGTCACGACAGAGCAGTGTAAGAGCCGCCACGTGGGTCC	G
 
 ## Configure file format for SNP
-The config file for SNP is in a tabular separated plain text file, which coordinates start from 1.  There is one fixed headline and 5 columns in each line. Then each subsequent line is for one SNP site. An example file is given for 8-kb fragments containing 20 human CODIS STRs. the "ID" column is the name of a DNA fragment, which uses the same name as one of the STR in this 8-kb fragment as STR configure. All SNPs with the same "ID" will be put together with STR alleles in the same fragment once the ID of STR is shared between SNP and STR configure file. 
+The config file for SNP is in a tabular separated plain text file, with coordinates started from 1.  There is one fixed headline and 5 columns in each line. Then each subsequent line is for one SNP site. An example file is given for 8-kb fragments containing 20 human CODIS STRs. the "ID" column is the name of a DNA fragment, which uses the same name as one of the STR in this 8-kb fragment as STR configure. All SNPs with the same "ID" will be put together with STR alleles in the same fragment once the ID of STR is shared between SNP and STR configure file. 
 
     #CHROM	 POS 	ID	REF	ALT
     chr1	230765010	D1S1656	A	G
@@ -190,7 +190,7 @@ The config file for SNP is in a tabular separated plain text file, which coordin
 Macrohaplotypes and supported read count in tabular text file .tsv. 
 E.g., the two macrohaplotypes around FBI's CODIS loci D2S441 in 8 kb PacBio HiFi reads of benchmark reference hg002. Locus details are at [FBI](https://www.fbi.gov/how-we-can-help-you/dna-fingerprint-act-of-2005-expungement-policy/codis-and-ndis-fact-sheet)
      
-The first line shows the total reads for this locus D3S1358. The position lines present the coordinate of each targeted variant site on chromosome in the human genome Hg38. Then the macrohaplotypes, including three parts of SNPs, InDels and STRs separated by ";".
+The first line shows the total reads for this locus D3S1358. The position lines present the coordinate of each targeted variant site on chromosomes in the human genome Hg38. Then the macrohaplotypes, including three parts of SNPs, InDels and STRs separated by ";".
 
      #Total hapVar: 	D3S1358	47621	
      #Markername	Counts	HapVarLen	hapVar(s)
@@ -200,13 +200,13 @@ The first line shows the total reads for this locus D3S1358. The position lines 
 
     
    ## Visualization 
-   The macrohaplotypes can be visualized or edited in a text processor, Microsoft excels, and spreadsheett.
+   The macrohaplotypes can be visualized or edited in a text processor, Microsoft excels, and spreadsheet.
    
    The graphically view and compare the macrohaplotypes, please use our graphic tool: [USAT](https://github.com/XuewenWangUGA/USAT)
    
   ## Other tools for processing bam files
-  These tools are desinged to process bam in any computing platforms, linke bam procssing for windows. It can be a Windows version of some functions of `samtools`. Please make sure you have the latest version of JAVA strandard envoroment installed (Java 17 or higher version).  This tool has been tested on Windows, Linux, and MacOS. 
-  Java enviroment dwonload link: https://www.oracle.com/java/technologies/downloads/. 
+  These tools are designed to process bam in any computing platform, bam processing for windows. It can be a Windows version of some functions of `samtools`. Please make sure you have the latest version of JAVA standard environment installed (Java 17 or higher version).  This tool has been tested on Windows, Linux, and MacOS. 
+  Java environment download link: https://www.oracle.com/java/technologies/downloads/. 
 
    #### Subset of a bam file:
   
