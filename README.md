@@ -23,11 +23,13 @@ V0.4
 V0.3
 
 ## Environment
-The Java run environment is needed, which is installed in most computer. You may just need to update it to the latest version. The Latest LTS Java 21 or higher is recommended. 
+The Java standard runtime environment (SE) is needed, which is installed in most computer. You may just need to update it to the latest version. The Latest LTS Java or Java SE 17 or higher is recommended. 
 
-Step 1. Go to the Orcale website, download and unzip the file https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz ; 
+Step 1. Go to the Orcale website, download and unzip the latest SE file from https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz ; 
 
-Step 2. Add the path to your unzipped Java bin directory before running the command. e.g.
+This binary version does not need installation, just unzip it.
+
+Step 2. Add the path to your unzipped Java bin directory before running the command. e.g.,
 the Java is unzipped into c/java21, then the path will be c/java21/jdk-21/bin, the running command will be :
 
 `path=c/java21/jdk-21/bin`
