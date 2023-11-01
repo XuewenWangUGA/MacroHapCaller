@@ -156,7 +156,7 @@ rename the genome sequence file as a short name:
 
  2. Configure files of targeted variant positional information for each of STRs, SNPs, and InDels
 
-## Configure format for STR
+### Configure format for STR
 The configure file listed the STR loci information in a tabular separated text file. An example file for forensic CODIS STR of human genome is given in "CODISSTR_anchor.XW.config_v0.2.txt"
 Each line for one STR locus. There is one fixed headline before starting the detailed STR locus. Every line has 11 columns. The integer value for the last column is the estimated maximum length of TR, where 500 is enough for most cases. The coordinate starts from 1.
 
@@ -167,7 +167,7 @@ Each line for one STR locus. There is one fixed headline before starting the det
 
     
 
-## Configure format for InDel
+### Configure format for InDel
 The config file for InDel is in a BED format tabular separated plain text file, with coordinates started from 0. The REF and ALT are the bases for InDel in the reference genome and variant. An example file is given for 8-kb fragments containing human CODIS STR. For Details, please read our paper. There is one fixed headline and 5 columns in each line. Then each subsequent line is for one InDel site. If multiple InDel for the same coordinate, list one of them is enough. 
 
     Chrom	ChromStart	ChromEnd	REF	ALT
@@ -178,7 +178,7 @@ The config file for InDel is in a BED format tabular separated plain text file, 
     chr2	1487522	1487526	CAGG	C
     chr2	1489924	1489975	GCACACAGGAGGAGTCACGACAGAGCAGTGTAAGAGCCGCCACGTGGGTCC	G
 
-## Configure format for SNP
+### Configure format for SNP
 The config file for SNP is in a tabular separated plain text file, with coordinates started from 1.  There is one fixed headline and 5 columns in each line. Then each subsequent line is for one SNP site. An example file is given for 8-kb fragments containing 20 human CODIS STRs. the "ID" column is the name of a DNA fragment, which uses the same name as one of the STR in this 8-kb fragment as STR configure. All SNPs with the same "ID" will be put together with STR alleles in the same fragment once the ID of STR is shared between SNP and STR configure file. 
 
     #CHROM	 POS 	ID	REF	ALT
@@ -201,12 +201,12 @@ The first line shows the total reads for this locus D3S1358. The position lines 
       D3S1358	13600	101	G,G,T,T,A,A,T,G,C,G,C,A,A,T,G,T,G,T,T,T,C,A,T,G,A,T,A,A,T,A,G,C,G,G,A,T,C,G;T,C,T;TCTATCTGTCTGTCTATCTATCTATCTATCTATCTATCTATCTATCTATCTATCTATCTA
 
     
-   ## Visualization 
+## Visualization 
    The macrohaplotypes can be visualized or edited in a text processor, Microsoft excels, and spreadsheet.
    
    The graphically view and compare the macrohaplotypes, please use our graphic tool: [USAT](https://github.com/XuewenWangUGA/USAT)
    
-  ## Other tools for processing bam files
+## Other tools for processing bam files
   These tools are designed to process bam in any computing platform, bam processing for windows. It can be a Windows version of some functions of `samtools`. Please make sure you have the latest version of JAVA standard environment installed (Java 17 or higher version).  This tool has been tested on Windows, Linux, and MacOS. 
   Java environment download link: https://www.oracle.com/java/technologies/downloads/. 
 
