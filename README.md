@@ -42,7 +42,7 @@ For help:
 
 `java -jar MacroHapCaller##.jar`
 
-where ## is the version number, e.g.: 0.4.
+where ## is the version number, e.g. :   0.4.
 
 ## Command: 
 to change the the version number as needed.
