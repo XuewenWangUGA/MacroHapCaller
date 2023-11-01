@@ -38,6 +38,26 @@ Or you can install the Java  JDK 21 in your computer, then you can run without $
 
 Or add the path into to environment.
 
+## Installation:
+The MacroHapCaller is programmed in Java and compiled. So just download the APP and run it.
+
+### Install  MacroHapCaller from the Github. 
+`git clone https://github.com/XuewenWangUGA/MacroHapCaller`
+
+`cd MacroHapCaller`
+
+Or just download all folders from Github and uncomppress the zip file. then go to the unzipped folder.
+
+`cd MacroHapCaller`
+
+
+
+### Install dependency (optional): fastq-filter 
+
+ fastq-filter is the only needed dependency if want to filter the reads. Details on https://github.com/LUMC/fastq-filter. To install
+
+`pip install fastq-filter`
+
 
 ## Help
 Open a terminal window. Type the following command for help: 
@@ -96,28 +116,6 @@ usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
     the option -Xmx120G is to set allowed maximum memory allowed for this app. it can be ignored or changed to a small memory , e.g., -Xmx4G
 
 ## Build a pipeline from fastq reads or PacBio bam to macrohaplotypes
-
-### Installation:
-The MacroHapCaller is programmed in Java and compiled. So just download the APP and run it.
-
-#### Install  MacroHapCaller from the Github. 
-`git clone https://github.com/XuewenWangUGA/MacroHapCaller`
-
-`cd MacroHapCaller`
-
-Or just download all folders from Github and uncomppress the zip file. then go to the unzipped folder.
-
-`cd MacroHapCaller`
-
-
-
-#### Install fastq-filter 
-
- fastq-filter is the only needed dependency if want to filter the reads. Details on https://github.com/LUMC/fastq-filter. To install
-
-`pip install fastq-filter`
-
-
 
 
 ### Step 0: Prepare a genome reference file which should be the one used for alignment
