@@ -37,14 +37,14 @@ Or you can install the Java  JDK 21 in your computer, then you can run without $
 Or add the path into to enviroment.
 
 
-## Usage
-For help: 
+## Help
+Open a terminal window. Type the following command for help: 
 
 `java -jar MacroHapCaller##.jar`
 
 where ## is the version number, e.g. :   0.4.
 
-## Command: 
+##  Command and options: 
 to change the the version number as needed.
 
 usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
@@ -87,7 +87,7 @@ usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
 
  
  ## Example : 
- parameters and configure files used in the demo:
+ download the subfolders and put inside the folder of "MacroHapCaller". Then users can use parameters and configure files as used in the demo as below.
  
     java -jar -Xmx120G MacroHapCaller0.4.jar -i demo_data/hg002.8kampl.Q30.4kreads.fastq.gz_GRCh38.bam -o hg002.8kampl.Q30.fastq.gz_GRCh38.HapVar.tsv -a config_v0.3/CODISSTR_anchor.XW.config_v0.3.txt -d config_v0.3/MHindels_v0.3.bed -n config_v0.3/MHsnps.pos_v0.3.txt -r GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta -l 2 -m 1 -q 15 -c 100 -p 0.01 -t 12
 
