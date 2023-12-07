@@ -238,7 +238,8 @@ Usage:
   This work was supported in part by award 15PNIJ-21-GG-04159-RESS, awarded by the National Institute of Justice, Office of Justice Programs, U.S. Department of Justice.
   
    ## Citation
-   In press
+   Xuewen Wang, Melissa Muenzler, Jonathan King,Muyi Liu, Hongmin Li, Bruce Budowle, Jianye Ge. 2023. A complete pipeline enables haplotyping and phasing macrohaplotype in long sequencing reads for polyploidy samples and a multi-source DNA mixture. accepted in press
+
 
 
 
