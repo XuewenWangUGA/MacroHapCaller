@@ -208,7 +208,7 @@ The first line shows the total reads for this locus D3S1358. The position lines 
    
    The graphically view and compare the macrohaplotypes, please use our graphic tool: [USAT](https://github.com/XuewenWangUGA/USAT)
 
-   A colorful display the macrohaplotypes in a web browser is also developed. For this utility, please email me for a free copy.
+   A colorful displaying the macrohaplotypes in a web browser is also developed. For this utility, please email me for a free copy.
 
    
 ## Other tools for processing bam files
