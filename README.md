@@ -8,7 +8,7 @@
   
 * __also works for short reads__
 
-* __Programmed by Ph.D Xuewen Wang for those love genomics and science__
+* __Programmed and developed by Ph.D Xuewen Wang for those love genomics and science__
 
 Macrohaplotype caller for STR, SNP, and InDel from NGS long-read sequencing data, especially for PacBio HiFi reads
 The MacroHapCaller calls targeted STRs/SSRs, SNPs, and InDels sites simultaneously in a row from each NGS read and clusters the variants into phased haplotype strings. MacroHapCaller is the best tool to analyze all haplotypic variants from genetically inherited DNA. It suits diploid, polyploid, and complex DNA mixtures from many individuals, e.g. DNA forensics. MacroHapCaller is programmed in Java with parallel computing enabled so it can run on any computing platform. 
@@ -194,7 +194,7 @@ The config file for SNP is in a tabular separated plain text file, with coordina
 Macrohaplotypes and supported read count in tabular text file .tsv. 
 E.g., the two macrohaplotypes around FBI's CODIS loci D2S441 in 8 kb PacBio HiFi reads of benchmark reference hg002. Locus details are at [FBI](https://www.fbi.gov/how-we-can-help-you/dna-fingerprint-act-of-2005-expungement-policy/codis-and-ndis-fact-sheet)
      
-The first line shows the total reads for this locus D3S1358. The position lines present the coordinate of each targeted variant site on chromosomes in the human genome Hg38. Then the macrohaplotypes, including three parts of SNPs, InDels and STRs separated by ";".
+The first line shows the total reads for this locus D3S1358. The position lines present the coordinate of each targeted variant site on chromosomes in the human genome Hg38. Then the macrohaplotypes, including three parts of SNPs, InDels and STRs separated by ";". If there is no specififed variant site for each type, the report will use "null" to indicate this type variant is not specified. 
 
      #Total hapVar: 	D3S1358	47621	
      #Markername	Counts	HapVarLen	hapVar(s)
@@ -207,6 +207,9 @@ The first line shows the total reads for this locus D3S1358. The position lines 
    The macrohaplotypes can be visualized or edited in a text processor, Microsoft excels, and spreadsheet.
    
    The graphically view and compare the macrohaplotypes, please use our graphic tool: [USAT](https://github.com/XuewenWangUGA/USAT)
+
+   A colorful display the macrohaplotypes in a web browser is also developed. For this utility, please email me for a free copy.
+
    
 ## Other tools for processing bam files
   These tools are designed to process bam in any computing platform, bam processing for windows. It can be a Windows version of some functions of `samtools`. Please make sure you have the latest version of JAVA standard environment installed (Java 17 or higher version).  This tool has been tested on Windows, Linux, and MacOS. 
