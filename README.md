@@ -128,7 +128,8 @@ usage: `java -jar -Xmx100G MacroHapCaller1.0.jar [options]`
  
     java -jar -Xmx120G MacroHapCaller0.4.jar -i demo_data/hg002.8kampl.Q30.4kreads.fastq.gz_GRCh38.bam -o hg002.8kampl.Q30.fastq.gz_GRCh38.HapVar.tsv -a config_v0.3/CODISSTR_anchor.XW.config_v0.3.txt -d config_v0.3/MHindels_v0.3.bed -n config_v0.3/MHsnps.pos_v0.3.txt -r GCA_000001405.15_GRCh38_no_alt_analysis_set.fasta -l 2 -m 1 -q 15 -c 100 -p 0.01 -t 12
 
-    the option -Xmx120G is to set allowed maximum memory allowed for this app. it can be ignored or changed to a small memory , e.g., -Xmx4G
+
+the option -Xmx120G is to set allowed maximum memory allowed for this app. it can be ignored or changed to a small memory , e.g., -Xmx4G
 
 ## Build a pipeline from fastq reads or PacBio bam to macrohaplotypes
 
