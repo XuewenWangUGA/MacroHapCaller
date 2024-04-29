@@ -112,8 +112,9 @@ usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
  
  **-r,--refGenomeFastaFile** <arg> &nbsp; Genome reference sequence file in .fasta
                                  format
- **-s,--span ** <arg>        T|F, T to report the read span macrohap
-                                 information, F not to report, default T
+                                
+ **-s,--span** <arg>        T|F, T to report the read span macrohap
+                                 information, F not to report, default T. For v1.0 or above only
  
  **-t,--ThreadNumber** &nbsp; integer, the number of computing threads,
                                  default [12]
