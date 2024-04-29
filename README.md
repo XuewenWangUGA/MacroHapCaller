@@ -24,9 +24,10 @@ V0.4
 ## Historical versions
 V0.3
 
-## config updates
+## Config updates
 
-config v0.4 updates: optimized the CSF1PO locus, removed variant sites (2 in snp panel) in the noisy regions ch5:150,083,350-150,083,403; chr5:150,084,343-150,084,480; corrected chr5	150076781 to CSF1PO
+the newest: config_v0.4 
+updates: optimized the CSF1PO locus, removed variant sites (2 in the snp panel) in the noisy regions at ch5:150,083,350-150,083,403; chr5:150,084,343-150,084,480; corrected chr5	150076781 to CSF1PO
 
 ## Environment
 The Java standard runtime environment (SE) is needed, which is installed in most computer. You may just need to update it to the latest version. The Latest LTS Java or Java SE 17 or higher is recommended. 
