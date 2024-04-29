@@ -19,10 +19,10 @@ The MacroHapCaller is also integrated into a pipeline with a shell script or Pyt
 MacroHapCaller runs fast. It takes ~ 2 mins for merged data from four full runs of PacBio SMRTcell HiFi reads on a Linux machine with 12 threads, and a maximum allowed 120G RAM. 
 
 ## The Latest version
-V0.4
+V1.0
 
 ## Historical versions
-V0.3
+V0.3, V0.4
 
 ## Config
 
@@ -79,7 +79,7 @@ where ## is the version number, e.g. :   0.4.
 ##  Command and options: 
 to change the version number as needed.
 
-usage: `java -jar -Xmx100G MacroHapCaller0.4.jar [options]`
+usage: `java -jar -Xmx100G MacroHapCaller1.0.jar [options]`
 
  **-a,--strAnchorFile** <arg>  &nbsp; configure file of anchors for STRs in
                                  tabular plain text
